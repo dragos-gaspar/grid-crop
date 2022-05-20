@@ -4,6 +4,7 @@ import json
 
 import xmltodict
 from skimage import io
+from typing import Union
 
 import config
 
@@ -11,7 +12,7 @@ import config
 config.INPUT_PATHS = [os.path.join(config.INPUT_BASE, inp) for inp in config.INPUT_PATHS]
 
 
-def make_dir(dir_path: str):
+def make_dir(dir_path: str) -> Union[str, None]:
     """
     Create a directory if it does not exist
 
@@ -30,7 +31,7 @@ def make_dir(dir_path: str):
         return None
 
 
-def get_bbox_from_xml(path: str):
+def get_bbox_from_xml(path: str) -> list:
     with open(path) as xml_file:
         data_dict = xmltodict.parse(xml_file.read())
 
@@ -41,7 +42,7 @@ def get_bbox_from_xml(path: str):
     return bounding_boxes
 
 
-def crop_image(image_meta, input_path):
+def crop_image(image_meta, input_path) -> None:
     """
     Crop an image in a grid-like fashion according to sizes defined in config.py
     Save images to disk along with resulting bounding box information as json
