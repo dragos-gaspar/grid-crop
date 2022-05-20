@@ -8,7 +8,7 @@ annotations. The annotations of the resulting cropped images are saved in json f
 ```
 git clone https://github.com/dragos-gaspar/grid-crop.git
 ```
-2. Install the dependencies in a Python 3.9 environment
+2. Install the dependencies in a Python 3.9 environment using pip (or using your preferred package manager)
 ```
 pip3 install -r requirements.txt
 ```
