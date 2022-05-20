@@ -11,6 +11,25 @@ import config
 config.INPUT_PATHS = [os.path.join(config.INPUT_BASE, inp) for inp in config.INPUT_PATHS]
 
 
+def make_dir(dir_path: str):
+    """
+    Create a directory if it does not exist
+
+    :param dir_path: absolute path to the directory
+    :return: path to the directory if successful or None if and error occurred
+    """
+
+    try:
+        isdir = os.path.isdir(dir_path)
+        if not isdir:
+            os.mkdir(dir_path)
+        return dir_path
+
+    except Exception as error:
+        print(error)
+        return None
+
+
 def get_bbox_from_xml(path: str):
     with open(path) as xml_file:
         data_dict = xmltodict.parse(xml_file.read())
