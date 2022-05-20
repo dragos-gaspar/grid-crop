@@ -58,6 +58,7 @@ def crop_image(image_meta, input_path) -> None:
     :param input_path: Base input path
     :return: None
     """
+
     # Load image
     image = io.imread(os.path.join(input_path, image_meta[0]))
 
