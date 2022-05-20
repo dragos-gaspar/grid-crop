@@ -109,7 +109,12 @@ def crop_image(image_meta, input_path):
             # Save image
             io.imsave(
                 os.path.join(
-                    config.OUTPUT_PATH,
+                    make_dir(
+                        os.path.join(
+                            config.OUTPUT_PATH,
+                            os.path.basename(input_path)
+                        )
+                    ),
                     crop_name
                 ),
                 crop,
@@ -117,7 +122,18 @@ def crop_image(image_meta, input_path):
             )
 
             # Save json
-            with open(os.path.join(config.OUTPUT_PATH, json_name), 'w') as f:
+            with open(
+                os.path.join(
+                    make_dir(
+                        os.path.join(
+                            config.OUTPUT_PATH,
+                            os.path.basename(input_path)
+                        )
+                    ),
+                    json_name
+                ),
+                'w'
+            ) as f:
                 json.dump(bb_json, f)
 
 
