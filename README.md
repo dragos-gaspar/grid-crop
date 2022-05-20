@@ -15,7 +15,7 @@ pip3 install -r requirements.txt
 3. Edit config.py to add your desired parameters
 4. Run the main.py script
 ```
-python3 main.py
+python main.py
 ```
 ## How to use (config.py parameters guide)
 - Replace the path in <samp>INPUT_BASE</samp> with the path to the Plastic Bottles Dataset repository on your machine
