@@ -32,6 +32,13 @@ def make_dir(dir_path: str) -> Union[str, None]:
 
 
 def get_bbox_from_xml(path: str) -> list:
+    """
+    Get bounding boxes from xml files as formatted in Plastic Bottles Dataset
+
+    :param path: Path to xml file
+    :return: list of bounding boxes
+    """
+
     with open(path) as xml_file:
         data_dict = xmltodict.parse(xml_file.read())
 
@@ -138,7 +145,13 @@ def crop_image(image_meta, input_path) -> None:
                 json.dump(bb_json, f)
 
 
-def main():
+def main() -> None:
+    """
+    App entry point
+
+    :return: None
+    """
+
     # Loop through input dirs list; run for every dir
     for input_path in config.INPUT_PATHS:
         print(f"Loading from {input_path}...")
