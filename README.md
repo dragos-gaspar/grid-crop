@@ -1,5 +1,5 @@
 # grid-crop
-This tool takes a set of images and crops them according to a grid. The size of the grid cells can be set in the config.py file, along with [other parameters](https://github.com/dragos-gaspar/grid-crop#how-to-use-configpy-guide).
+This tool takes a set of images and crops them according to a grid. The size of the grid cells can be set in the config.py file, along with [other parameters](https://github.com/dragos-gaspar/grid-crop#how-to-use-configpy-parameters-guide).
 The app is designed to work with the [Plastic Bottle Dataset](https://github.com/m0-n/Plastic-Bottles-Dataset), so it will expect a similar format for the
 annotations. The annotations of the resulting cropped images are saved in json format.
 
