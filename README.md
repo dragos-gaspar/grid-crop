@@ -22,6 +22,6 @@ python3 main.py
 - Add the names of the directories which contain the images you want to crop to the <samp>INPUT_PATHS</samp> list
 - Set the <samp>OUTPUT_PATH</samp> variable. The same directory structure that can be found in the Plastic Bottles Dataset repo will be created at this path
 #### Additional parameters
-- <samp>CROP_WIDTH</samp> and <samp>CROP_HEIGHT</samp> variables control the size of the cropped images.
+- <samp>CROP_WIDTH</samp> and <samp>CROP_HEIGHT</samp> control the size of the cropped images.
 - <samp>THRESHOLD</samp> contains the cues used to determine if a bounding box is "valid". When a bounding box of a cropped image is created, the app checks if
 the minimum requirements declared here are met. If they are not met then the bounding box is discarded. This is done in order to circumvent a corner case where only a few pixels of a bounding box overlap with the crop.
