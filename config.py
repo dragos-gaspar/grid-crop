@@ -19,7 +19,7 @@ CROP_WIDTH = 576
 CROP_HEIGHT = 532
 
 
-# Bounding box thresholding; a resulting bounding box in a crop must satisfy these requirements
+# Bounding box thresholding; a resulting bounding box in a crop must satisfy these minimum requirements
 THRESHOLD = {
     'height': 10,
     'width': 10,
