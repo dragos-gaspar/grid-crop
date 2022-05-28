@@ -25,3 +25,7 @@ THRESHOLD = {
     'width': 10,
     'area': 200
 }
+
+
+# Format of the resulting annotations; can be "json" for "voc"
+ANNOTATIONS_FORMAT = 'xml'

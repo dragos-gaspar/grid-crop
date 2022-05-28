@@ -1,6 +1,5 @@
 import os
 
-
 import xmltodict
 from typing import Union
 
@@ -24,7 +23,7 @@ def make_dir(dir_path: str) -> Union[str, None]:
         return None
 
 
-def get_bbox_from_xml(path: str) -> list:
+def read_voc(path: str) -> dict:
     """
     Get bounding boxes from xml files formatted in Pascal VOC format
 
@@ -36,12 +35,6 @@ def get_bbox_from_xml(path: str) -> list:
         data_dict = xmltodict.parse(xml_file.read())
 
     xml_file.close()
-    bounding_boxes = data_dict["annotation"]["object"]
-    bounding_boxes = [
-        {
-            'bndbox': bb["bndbox"],
-            'name': bb['name']
-        } for bb in bounding_boxes
-    ]
+    bounding_boxes = data_dict["annotation"]
 
     return bounding_boxes
