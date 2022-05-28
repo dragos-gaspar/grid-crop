@@ -1,6 +1,7 @@
 # grid-crop
 This tool takes a set of images and crops them according to a grid. The size of the grid cells can be set in the config.py file, along with [other parameters](https://github.com/dragos-gaspar/grid-crop#how-to-use-configpy-parameters-guide).
-The app is designed to work with the [Plastic Bottle Dataset](https://github.com/m0-n/Plastic-Bottles-Dataset), so it will expect the annotations to be in the Pascal VOC format. The annotations of the resulting cropped images are saved in json format.
+The app is designed to work with the [Plastic Bottle Dataset](https://github.com/m0-n/Plastic-Bottles-Dataset), so it will expect the annotations to be in the Pascal VOC format. The annotations of the resulting cropped images
+can be saved either as json or xml.
 
 ## How to run
 1. Clone this repository
@@ -24,3 +25,4 @@ python main.py
 - <samp>CROP_WIDTH</samp> and <samp>CROP_HEIGHT</samp> control the size of the cropped images.
 - <samp>THRESHOLD</samp> contains the cues used to determine if a bounding box is "valid". When a bounding box of a cropped image is created, the app checks if
 the minimum requirements declared here are met. If they are not met then the bounding box is discarded. This is done in order to circumvent a corner case where only a few pixels of a bounding box overlap with the crop.
+- <samp>ANNOTATIONS_FORMAT</samp> is the format for the resulting annotation files. Can be either "json" or "voc".
