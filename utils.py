@@ -12,15 +12,21 @@ def make_dir(dir_path: str) -> Union[str, None]:
     :return: path to the directory if successful or None if and error occurred
     """
 
-    try:
-        isdir = os.path.isdir(dir_path)
-        if not isdir:
-            os.mkdir(dir_path)
-        return dir_path
+    split_path = os.path.split(dir_path)
+    crt_path = ''
 
-    except Exception as error:
-        print(error)
-        return None
+    for level in split_path:
+        try:
+            crt_path = os.path.join(crt_path, level)
+            isdir = os.path.isdir(crt_path)
+            if not isdir:
+                os.mkdir(crt_path)
+
+        except Exception as error:
+            print(error)
+            return None
+
+    return crt_path
 
 
 def read_voc(path: str) -> dict:

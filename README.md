@@ -18,9 +18,9 @@ pip3 install -r requirements.txt
 python main.py
 ```
 ## How to use (config.py parameters guide)
-- Replace the path in <samp>INPUT_BASE</samp> with the path to the Plastic Bottles Dataset repository on your machine
-- Add the names of the directories which contain the images you want to crop to the <samp>INPUT_PATHS</samp> list
-- Set the <samp>OUTPUT_PATH</samp> variable. The same directory structure that can be found in the Plastic Bottles Dataset repo will be created at this path
+- Replace the path in <samp>INPUT_BASE</samp> with the path to the Plastic Bottles Dataset repository on your machine.
+- Add the names of the directories which contain the images you want to crop to the <samp>INPUT_PATHS</samp> list.
+- Set the <samp>IMAGES_OUTPUT_PATH</samp> and <samp>ANNOTATIONS_OUTPUT_PATH</samp> variables. The same directory structure that can be found in the Plastic Bottles Dataset repo will be created at these paths.
 #### Additional parameters
 - <samp>CROP_WIDTH</samp> and <samp>CROP_HEIGHT</samp> control the size of the cropped images.
 - <samp>THRESHOLD</samp> contains the cues used to determine if a bounding box is "valid". When a bounding box of a cropped image is created, the app checks if

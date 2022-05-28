@@ -9,9 +9,14 @@ INPUT_PATHS = [
 ]
 
 
-# Output directory. Can be any directory (absolute path or relative to cwd)
+# Image output directory. Can be any directory (absolute path or relative to cwd)
 # Directories in the INPUT_PATHS list will be created here if they don't exist
-OUTPUT_PATH = r"processed_images"
+IMAGES_OUTPUT_PATH = r"processed_images"
+
+
+# Annotations output directory. Can be any directory (absolute path or relative to cwd)
+# Directories in the INPUT_PATHS list will be created here if they don't exist
+ANNOTATIONS_OUTPUT_PATH = r"processed_annotations"
 
 
 # Size of resulting cropped images

@@ -78,7 +78,7 @@ def crop_image(image_meta, input_path) -> None:
             full_crop_name = os.path.join(
                     make_dir(
                         os.path.join(
-                            config.OUTPUT_PATH,
+                            config.IMAGES_OUTPUT_PATH,
                             os.path.basename(input_path)
                         )
                     ),
@@ -87,7 +87,7 @@ def crop_image(image_meta, input_path) -> None:
             full_annotation_name = os.path.join(
                 make_dir(
                     os.path.join(
-                        config.OUTPUT_PATH,
+                        config.ANNOTATIONS_OUTPUT_PATH,
                         os.path.basename(input_path)
                     )
                 ),
